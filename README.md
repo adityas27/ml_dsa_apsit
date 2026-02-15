@@ -202,8 +202,4 @@ Rescaling values to a fixed range, typically [0,1].
 - Telco Customer Churn (external, if you need the original dataset): https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 - Example housing datasets and competitions: https://www.kaggle.com/c/house-prices-advanced-regression-techniques
 
-## Additional documentation
 
-Students should follow the notebooks in `housing_eda.ipynb` and the notebooks in `chrun/` for step-by-step instructions. The `deployment/README.md` contains deployment-specific guidance and server run commands.
-
-If you want, I can also generate a `requirements-analysis.txt` that pins exact package versions used during the sessions.
