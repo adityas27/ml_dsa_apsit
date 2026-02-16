@@ -6,31 +6,31 @@ A comprehensive machine learning project repository for learning and practicing 
 
 ### Housing Project
 Learn regression modeling and housing price prediction:
-- **[Housing EDA Notebook](https://github.com/adityas27/ml_apsit/blob/main/housing/housing_eda.ipynb)** — Exploratory data analysis of housing dataset
-- **[Housing Models Notebook](https://github.com/adityas27/ml_apsit/blob/main/housing/housing_models.ipynb)** — Model training and evaluation
-- **Data**: [`housing.csv`](https://github.com/adityas27/ml_apsit/blob/main/housing/housing.csv)
+- **[Housing EDA Notebook](https://github.com/adityas27/ml_dsa_apsit/blob/main/housing/housing_eda.ipynb)** — Exploratory data analysis of housing dataset
+- **[Housing Models Notebook](https://github.com/adityas27/ml_dsa_apsit/blob/main/housing/housing_models.ipynb)** — Model training and evaluation
+- **Data**: [`housing.csv`](https://github.com/adityas27/ml_dsa_apsit/blob/main/housing/housing.csv)
 
 ### Churn Prediction Project
 Learn classification modeling and customer churn prediction:
-- **[Churn EDA Notebook](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_eda.ipynb)** — Exploratory data analysis of customer churn
-- **[Churn Models Notebook](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_model.ipynb)** — Model training and evaluation
-- **Data**: [`churn_data.xlsx`](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_data.xlsx)
-- **Trained Model**: [`logistic_churn_model.pkl`](https://github.com/adityas27/ml_apsit/blob/main/chrun/logistic_churn_model.pkl)
+- **[Churn EDA Notebook](https://github.com/adityas27/ml_dsa_apsit/blob/main/chrun/churn_eda.ipynb)** — Exploratory data analysis of customer churn
+- **[Churn Models Notebook](https://github.com/adityas27/ml_dsa_apsit/blob/main/chrun/churn_model.ipynb)** — Model training and evaluation
+- **Data**: [`churn_data.xlsx`](https://github.com/adityas27/ml_dsa_apsit/blob/main/chrun/churn_data.xlsx)
+- **Trained Model**: [`logistic_churn_model.pkl`](https://github.com/adityas27/ml_dsa_apsit/blob/main/chrun/logistic_churn_model.pkl)
 
 ### Production Deployment
 Ready-to-use FastAPI application for model serving:
-- **[FastAPI App](https://github.com/adityas27/ml_apsit/blob/main/deployment/app.py)** — Production API server
-- **[Requirements](https://github.com/adityas27/ml_apsit/blob/main/deployment/requirements.txt)** — Python dependencies
-- **[Example Request](https://github.com/adityas27/ml_apsit/blob/main/deployment/example_request.json)** — Sample API payload
-- **[Deployment README](https://github.com/adityas27/ml_apsit/blob/main/deployment/README.md)** — Detailed deployment guide
+- **[FastAPI App](https://github.com/adityas27/ml_dsa_apsit/blob/main/deployment/app.py)** — Production API server
+- **[Requirements](https://github.com/adityas27/ml_dsa_apsit/blob/main/deployment/requirements.txt)** — Python dependencies
+- **[Example Request](https://github.com/adityas27/ml_dsa_apsit/blob/main/deployment/example_request.json)** — Sample API payload
+- **[Deployment README](https://github.com/adityas27/ml_dsa_apsit/blob/main/deployment/README.md)** — Detailed deployment guide
 
 ## 🚀 Quick Start Guide
 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/adityas27/ml_apsit.git
-cd ml_apsit
+git clone https://github.com/adityas27/ml_dsa_apsit.git
+cd ml_dsa_apsit
 ```
 
 ### Step 2: Create a Virtual Environment
@@ -88,15 +88,15 @@ Then navigate to:
    ```
 4. Test the API:
    - Visit: `http://localhost:8000/docs` (Interactive API documentation)
-   - Use the example request: [`deployment/example_request.json`](https://github.com/adityas27/ml_apsit/blob/main/deployment/example_request.json)
+   - Use the example request: [`deployment/example_request.json`](https://github.com/adityas27/ml_dsa_apsit/blob/main/deployment/example_request.json)
 
 ## 📊 Key Concepts Learning Path
 
 ### Housing Regression Project
 **Focus:** Predicting continuous values (house prices)
 
-1. **[Start with EDA](https://github.com/adityas27/ml_apsit/blob/main/housing/housing_eda.ipynb)** - Understand data distribution, correlations, and patterns
-2. **[Learn Modeling](https://github.com/adityas27/ml_apsit/blob/main/housing/housing_models.ipynb)** - Build and evaluate regression models
+1. **[Start with EDA](https://github.com/adityas27/ml_dsa_apsit/blob/main/housing/housing_eda.ipynb)** - Understand data distribution, correlations, and patterns
+2. **[Learn Modeling](https://github.com/adityas27/ml_dsa_apsit/blob/main/housing/housing_models.ipynb)** - Build and evaluate regression models
 3. **Concepts covered:**
    - Data cleaning and preprocessing
    - Feature engineering and selection
@@ -106,8 +106,8 @@ Then navigate to:
 ### Churn Classification Project
 **Focus:** Predicting categorical outcomes (churn/no churn)
 
-1. **[Start with EDA](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_eda.ipynb)** - Analyze customer churn patterns
-2. **[Learn Modeling](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_model.ipynb)** - Build classification models
+1. **[Start with EDA](https://github.com/adityas27/ml_dsa_apsit/blob/main/chrun/churn_eda.ipynb)** - Analyze customer churn patterns
+2. **[Learn Modeling](https://github.com/adityas27/ml_dsa_apsit/blob/main/chrun/churn_model.ipynb)** - Build classification models
 3. **Concepts covered:**
    - Handling imbalanced data
    - Feature scaling and encoding
@@ -119,8 +119,8 @@ Then navigate to:
 
 | Project | Dataset | Source | Format |
 |---------|---------|--------|--------|
-| Housing | [housing.csv](https://github.com/adityas27/ml_apsit/blob/main/housing/housing.csv) | Local | CSV (20,640 rows) |
-| Churn | [churn_data.xlsx](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_data.xlsx) | Local | Excel | 
+| Housing | [housing.csv](https://github.com/adityas27/ml_dsa_apsit/blob/main/housing/housing.csv) | Local | CSV (20,640 rows) |
+| Churn | [churn_data.xlsx](https://github.com/adityas27/ml_dsa_apsit/blob/main/chrun/churn_data.xlsx) | Local | Excel | 
 | Churn (Reference) | [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) | Kaggle | CSV |
 
 ## 📖 Machine Learning Terminology Reference
@@ -330,7 +330,7 @@ A: Use the deployment template in the `deployment/` directory as a reference for
 
 ## 📧 Questions or Issues?
 
-For questions about this repository, please open an issue on GitHub: https://github.com/adityas27/ml_apsit/issues
+For questions about this repository, please open an issue on GitHub: https://github.com/adityas27/ml_dsa_apsit/issues
 
 ---
 
