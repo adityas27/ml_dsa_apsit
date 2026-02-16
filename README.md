@@ -1,61 +1,133 @@
 # ML APSIT Sessions
 
-This repository contains two student projects and a deployment directory:
+A comprehensive machine learning project repository for learning and practicing data science concepts. This repository contains two complete student projects with exploratory data analysis, modeling, and a production-ready API for model deployment.
 
-- `housing/` and `housing_eda.ipynb` — exploratory analysis and exercises for the housing dataset.
-- `chrun/` — churn analysis notebooks and modeling.
-- `deployment/` — FastAPI app and artifacts for serving the trained churn model.
-- `housing.csv` — housing dataset used in the housing notebook.
+## 📁 Project Structure
 
-## Installation
+### Housing Project
+Learn regression modeling and housing price prediction:
+- **[Housing EDA Notebook](https://github.com/adityas27/ml_apsit/blob/main/housing/housing_eda.ipynb)** — Exploratory data analysis of housing dataset
+- **[Housing Models Notebook](https://github.com/adityas27/ml_apsit/blob/main/housing/housing_models.ipynb)** — Model training and evaluation
+- **Data**: [`housing.csv`](https://github.com/adityas27/ml_apsit/blob/main/housing/housing.csv)
 
-There are two installation flows: one for the analysis (housing + churn notebooks) and a separate one for the deployment server.
+### Churn Prediction Project
+Learn classification modeling and customer churn prediction:
+- **[Churn EDA Notebook](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_eda.ipynb)** — Exploratory data analysis of customer churn
+- **[Churn Models Notebook](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_model.ipynb)** — Model training and evaluation
+- **Data**: [`churn_data.xlsx`](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_data.xlsx)
+- **Trained Model**: [`logistic_churn_model.pkl`](https://github.com/adityas27/ml_apsit/blob/main/chrun/logistic_churn_model.pkl)
 
-1) Analysis (housing + churn)
+### Production Deployment
+Ready-to-use FastAPI application for model serving:
+- **[FastAPI App](https://github.com/adityas27/ml_apsit/blob/main/deployment/app.py)** — Production API server
+- **[Requirements](https://github.com/adityas27/ml_apsit/blob/main/deployment/requirements.txt)** — Python dependencies
+- **[Example Request](https://github.com/adityas27/ml_apsit/blob/main/deployment/example_request.json)** — Sample API payload
+- **[Deployment README](https://github.com/adityas27/ml_apsit/blob/main/deployment/README.md)** — Detailed deployment guide
 
-On Windows (PowerShell):
+## 🚀 Quick Start Guide
 
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/adityas27/ml_apsit.git
+cd ml_apsit
+```
+
+### Step 2: Create a Virtual Environment
+
+**On Windows (PowerShell):**
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-pip install --upgrade pip
-pip install pandas numpy scikit-learn matplotlib seaborn jupyterlab notebook
 ```
 
-This installs the packages students commonly need to run the notebooks in `housing/` and `chrun/`.
+**On macOS/Linux:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-2) Deployment (FastAPI model server)
+### Step 3: Install Dependencies
 
-The production-ready dependencies are kept in `deployment/requirements.txt`.
+**For Notebooks (Housing + Churn Analysis):**
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter jupyterlab
+```
 
-```powershell
-python -m venv .venv-deploy
-.\.venv-deploy\Scripts\Activate.ps1
+**For Deployment Server:**
+```bash
 pip install -r deployment/requirements.txt
 ```
 
-Run the server locally for development:
+## 📚 Running the Projects
 
-```powershell
-uvicorn deployment.app:app --host 0.0.0.0 --port 8000 --reload
+### Running Jupyter Notebooks
+
+After installing dependencies and activating the virtual environment:
+
+```bash
+jupyter notebook
 ```
 
-Ensure your trained model file is located at `deployment/model.pkl` before starting the server.
+Then navigate to:
+- `housing/housing_eda.ipynb` — Start with exploratory analysis
+- `housing/housing_models.ipynb` — Learn regression modeling
+- `chrun/churn_eda.ipynb` — Customer churn data exploration
+- `chrun/churn_model.ipynb` — Classification modeling
 
-## Project structure
+### Running the FastAPI Server
 
-- `housing_eda.ipynb` — housing EDA notebook
-- `housing.csv` — housing dataset used in notebooks
-- `chrun/` — churn notebooks and modeling
-- `deployment/` — FastAPI app, `requirements.txt`, and example request
+1. Ensure the trained model exists: `chrun/logistic_churn_model.pkl`
+2. Activate the deployment environment:
+   ```powershell
+   .\.venv-deploy\Scripts\Activate.ps1
+   ```
+3. Start the server:
+   ```bash
+   uvicorn deployment.app:app --host 0.0.0.0 --port 8000 --reload
+   ```
+4. Test the API:
+   - Visit: `http://localhost:8000/docs` (Interactive API documentation)
+   - Use the example request: [`deployment/example_request.json`](https://github.com/adityas27/ml_apsit/blob/main/deployment/example_request.json)
 
-## Example request (deployment)
+## 📊 Key Concepts Learning Path
 
-See `deployment/example_request.json` for a sample payload for the `/predict` endpoint.
+### Housing Regression Project
+**Focus:** Predicting continuous values (house prices)
 
-## Core Machine Learning Terms
+1. **[Start with EDA](https://github.com/adityas27/ml_apsit/blob/main/housing/housing_eda.ipynb)** - Understand data distribution, correlations, and patterns
+2. **[Learn Modeling](https://github.com/adityas27/ml_apsit/blob/main/housing/housing_models.ipynb)** - Build and evaluate regression models
+3. **Concepts covered:**
+   - Data cleaning and preprocessing
+   - Feature engineering and selection
+   - Model comparison (Linear Regression, Random Forest, etc.)
+   - Performance metrics (MAE, RMSE, R²)
 
-🔹 Core Machine Learning Terms
+### Churn Classification Project
+**Focus:** Predicting categorical outcomes (churn/no churn)
+
+1. **[Start with EDA](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_eda.ipynb)** - Analyze customer churn patterns
+2. **[Learn Modeling](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_model.ipynb)** - Build classification models
+3. **Concepts covered:**
+   - Handling imbalanced data
+   - Feature scaling and encoding
+   - Model comparison (Logistic Regression, Decision Trees, etc.)
+   - Classification metrics (Precision, Recall, F1-Score)
+   - Deployment preparation
+
+## 💾 Datasets
+
+| Project | Dataset | Source | Format |
+|---------|---------|--------|--------|
+| Housing | [housing.csv](https://github.com/adityas27/ml_apsit/blob/main/housing/housing.csv) | Local | CSV (20,640 rows) |
+| Churn | [churn_data.xlsx](https://github.com/adityas27/ml_apsit/blob/main/chrun/churn_data.xlsx) | Local | Excel | 
+| Churn (Reference) | [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) | Kaggle | CSV |
+
+## 📖 Machine Learning Terminology Reference
+
+Use this section to understand key ML concepts you'll encounter in the notebooks.
+
+### Core Concepts
 
 1. Feature
 
@@ -96,8 +168,7 @@ A configuration parameter set before training that controls model behavior (e.g.
 10. Parameter
 
 Values learned by the model during training (e.g., weights in linear regression).
-
-🔹 Model Performance & Behavior
+### Model Performance & Evaluation
 
 11. Overfitting
 
@@ -138,8 +209,7 @@ The harmonic mean of precision and recall.
 20. Confusion Matrix
 
 A table that shows true positives, true negatives, false positives, and false negatives.
-
-🔹 EDA (Exploratory Data Analysis) Terms
+### Exploratory Data Analysis (EDA)
 
 21. Missing Values
 
@@ -172,8 +242,7 @@ When one class significantly outnumbers another in classification tasks.
 28. Data Leakage
 
 When information from outside the training dataset is used to create the model, leading to overly optimistic performance.
-
-🔹 Data Preprocessing Terms
+### Data Preprocessing Techniques
 
 29. Encoding
 
@@ -195,11 +264,78 @@ Transforming data to have mean 0 and standard deviation 1.
 
 Rescaling values to a fixed range, typically [0,1].
 
-## Datasets & Resources
+## 🌐 Useful Resources & References
 
-- Housing dataset (local): `housing.csv`
-- Churn notebooks & data (local): `chrun/`
-- Telco Customer Churn (external, if you need the original dataset): https://www.kaggle.com/datasets/blastchar/telco-customer-churn
-- Example housing datasets and competitions: https://www.kaggle.com/c/house-prices-advanced-regression-techniques
+### Documentation
+- **Scikit-learn**: https://scikit-learn.org/stable/documentation.html
+- **Pandas**: https://pandas.pydata.org/docs/
+- **NumPy**: https://numpy.org/doc/
+- **Matplotlib**: https://matplotlib.org/stable/contents.html
+- **Seaborn**: https://seaborn.pydata.org/
+
+### Learning Resources
+- **Kaggle Datasets**: https://www.kaggle.com/datasets - Find more datasets to practice
+- **Kaggle Learn**: https://www.kaggle.com/learn - Free micro-courses on ML topics
+- **Scikit-learn Examples**: https://scikit-learn.org/stable/auto_examples/index.html
+- **Real Python**: https://realpython.com/tutorials/basics/ - Python and data science tutorials
+
+### Related Datasets
+- **[Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)** - Original churn dataset (Kaggle)
+- **[House Prices Dataset](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)** - Advanced housing regression (Kaggle Competition)
+- **[UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/)** - Free collection of datasets
+
+### Tools & Libraries
+- **Jupyter**: https://jupyter.org/ - Interactive notebook environment
+- **JupyterLab**: https://jupyterlab.readthedocs.io/ - Next-gen notebook interface
+- **FastAPI**: https://fastapi.tiangolo.com/ - Modern Python web framework for APIs
+- **Uvicorn**: https://www.uvicorn.org/ - ASGI server for running FastAPI apps
+
+## ❓ FAQs for Students
+
+**Q: Which project should I start with?**
+A: Start with the Housing project as it covers basic regression. Then move to Churn for classification concepts.
+
+**Q: How long does it take to complete a project?**
+A: ~2-3 hours per project if you study each notebook and run the code.
+
+**Q: Can I modify the notebooks?**
+A: Absolutely! Experimentation is key to learning. Try changing parameters, adding features, or using different models.
+
+**Q: Where do I find more datasets to practice?**
+A: Visit [Kaggle Datasets](https://www.kaggle.com/datasets) or [UCI ML Repository](https://archive.ics.uci.edu/ml/)
+
+**Q: How do I deploy my own model?**
+A: Use the deployment template in the `deployment/` directory as a reference for your own FastAPI setup.
+
+## 📝 Project Workflow
+
+```
+1. Clone Repository
+   ↓
+2. Set up Virtual Environment
+   ↓
+3. Install Dependencies
+   ↓
+4. Run Housing Project
+   ├─ Explore: housing_eda.ipynb
+   └─ Model: housing_models.ipynb
+   ↓
+5. Run Churn Project
+   ├─ Explore: churn_eda.ipynb
+   └─ Model: churn_model.ipynb
+   ↓
+6. Understand Deployment (Optional)
+   └─ Review: deployment/app.py & README.md
+```
+
+## 📧 Questions or Issues?
+
+For questions about this repository, please open an issue on GitHub: https://github.com/adityas27/ml_apsit/issues
+
+---
+
+**Happy Learning! 🚀**
+
+*Last Updated: February 2025*
 
 
