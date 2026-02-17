@@ -334,6 +334,13 @@ For questions about this repository, please open an issue on GitHub: https://git
 
 ---
 
+## Mathematic Resources
+- **[Logistic Regression in 3 Minutes](https://www.youtube.com/watch?v=EKm0spFxFG4)** – A quick overview of logistic regression concepts.
+- **[Random Forest Algorithm Clearly Explained!](https://www.youtube.com/watch?v=v6VJ2RO66Ag)** – Visual explanation of how the random forest algorithm works.
+- **[Standardization vs Normalization Clearly Explained!](https://www.youtube.com/watch?v=sxEqtjLC0aM)** – Feature scaling comparison for data preprocessing.
+- **[Linear Regression in 3 Minutes](https://www.youtube.com/watch?v=3dhcmeOTZ_Q)** – Short introduction to linear regression.
+- **[Feature Engineering for AI: Transforming Raw Data into Predictions](https://www.youtube.com/watch?v=Bg3CjiJ67Cc)** – How to turn raw data into model-ready features.
+
 **Happy Learning! 🚀**
 
 *Last Updated: February 2025*
